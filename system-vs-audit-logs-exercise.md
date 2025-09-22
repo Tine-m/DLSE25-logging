@@ -1,4 +1,4 @@
-# 🧩 Exercise: System Logs vs Audit Logs
+# Exercise: System Logs vs Audit Logs
 
 Decide whether each event should be logged as a **System Log** 🖥️ or an **Audit Log** 🔒.  
 Explain **why** in each case.
@@ -20,22 +20,8 @@ Explain **why** in each case.
 
 ---
 
-## Suggested Answers (Teacher’s Key)
-
-1. **System log** – operational event (startup info).  
-2. **Audit log** – authentication success (who, when, where).  
-3. **System log** – error about system health (DB issue).  
-4. **Audit log** – authorization failure (security-critical).  
-5. **System log** – performance monitoring of external service.  
-6. **Audit log** – administrative action on user roles.  
-7. **System log** – system resource housekeeping.  
-8. **Audit log** – data modification (user action on business object).  
-9. **System log** – operational lifecycle event.  
-10. **Audit log** – repeated failed logins → potential intrusion attempt.  
-
----
-
 ✅ **Rule of thumb for solving:**  
 - If it’s about **system health/operation** → System Log 🖥️  
 - If it’s about **user actions or security** → Audit Log 🔒  
+
 
