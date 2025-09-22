@@ -68,9 +68,10 @@ Use this guide to decide **what, why, and when** to log in your applications.
   ```
 - Keep wording consistent: *Started…*, *Completed…*, *Failed…*  
 - Use correlation IDs if possible (trace a request across services)  
-- Rotate & retain logs (e.g., 7–30 days for system logs)  
+- Rotate & retain logs (e.g., 7–30 days for system logs)  - we haven't covered this topic yet!
 
 ---
 
 ✅ **Rule of thumb:**  
 System logs should tell the **story of your application’s life** – what it did, when, and how well.  
+
