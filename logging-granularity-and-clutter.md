@@ -25,7 +25,7 @@ It’s also about **deciding *what* to log and at what level**. This is where gr
 
 ---
 
-## 🧹 The Clutter Problem
+## The Clutter Problem
 If you log *everything*:
 - Code looks messy (lots of log statements).
 - Log files become huge and hard to search.
@@ -37,11 +37,53 @@ If you log *too little*:
 
 ---
 
-## 🎯 Finding the Balance
+## Finding the Balance
 - Use **INFO** for operators: startup/shutdown, major business events, warnings, errors.
 - Use **DEBUG/TRACE** for developers: detailed flow, parameters, calculations.
-- Hide low-level details in helpers, aspects, or conditional blocks.
+- Hide low-level details in helpers and conditional blocks.
 - Consider: *“Will someone need this info to run the system, or only to debug code?”*
+
+---
+## Hiding Low-Level Logging Details
+
+Too many `log.debug(...)` lines can clutter your business code.  
+Instead, move detailed logging into **helpers** or use **conditional blocks**.
+
+### Use a Helper Method
+Instead of sprinkling details everywhere:
+
+```java
+// ❌ Cluttered
+log.debug("Calculated subtotal = {}", subtotal);
+log.debug("Applied taxRate = {}", taxRate);
+log.debug("Final tax = {}", tax);
+```
+
+Wrap them in a helper:
+
+```java
+private void logTaxDetails(String orderId, double subtotal, double taxRate, double tax) {
+    if (log.isDebugEnabled()) {  // only build strings if DEBUG is on
+        log.debug("Tax details for order {}: subtotal={}, rate={}, tax={}",
+                  orderId, subtotal, taxRate, tax);
+    }
+}
+
+// Usage in business code
+logTaxDetails(orderId, subtotal, taxRate, tax);
+```
+
+➡️ Cleaner business logic, debug detail hidden in one place.
+
+
+### Use Conditional Logging
+Avoid computing expensive debug strings unless really needed:
+
+```java
+if (log.isDebugEnabled()) {
+    log.debug("Detailed object dump: {}", bigObject.toString());
+}
+```
 
 ---
 
