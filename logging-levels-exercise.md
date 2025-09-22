@@ -1,6 +1,6 @@
 # Exercise: Choosing Log Levels (INFO vs DEBUG vs ERROR)
 
-Decide whether each log line should be logged at **INFO** (for operators) or **DEBUG** (for developers).  
+Decide log level for each log line:  **INFO** (for operators), **DEBUG** (for developers).  
 Explain your reasoning.
 
 ---
@@ -23,6 +23,7 @@ Explain your reasoning.
 ✅ **Rule of thumb:**  
 - **INFO** = story for operators (what happened).  
 - **DEBUG** = extra detail for developers (how it happened).  
+
 
 
 
