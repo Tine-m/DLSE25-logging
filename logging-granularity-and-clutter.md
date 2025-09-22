@@ -1,11 +1,11 @@
-# 🎨 The Art of Logging: Granularity and Clutter
+# The Art of Logging: Granularity and Clutter
 
 Logging is not only about the mechanics (using Logback, appenders, levels).  
 It’s also about **deciding *what* to log and at what level**. This is where granularity comes in.
 
 ---
 
-## 🔎 What is Log Granularity?
+## What is Log Granularity?
 **Granularity** = the *amount of detail* you put into logs.
 
 - **Fine-grained (detailed) logging**  
