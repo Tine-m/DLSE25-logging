@@ -114,7 +114,7 @@ Example log output
 
 *Usage*: If users say “rentals are slow”, logs show how long each request takes.
 
-Here is anothet example where one request log (INFO) wraps a "TimeIt" debug log for an inner database call — to show operator vs developer detail in action: [Example that measure timing](https://github.com/Tine-m/DLSE25/blob/main/logging-requestlogger-timeit-combined.md)
+Here is anothet example where one request log (INFO) wraps a "TimeIt" debug log for an inner database call — to show operator vs developer detail in action: [Examples that measure timing](https://github.com/Tine-m/DLSE25/blob/main/logging-requestlogger-timeit-combined.md)
 
 ---
 
