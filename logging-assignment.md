@@ -1,4 +1,4 @@
-# Study Point Assignment: Logging
+# Study Point Assignment: Logging (10SP)
 
 ## Case
 *Copenhagen City Bikes* is a small bike-rental web service. You must add **system logging** and **audit logging** to help operators run the system and security teams trace user actions. The service has the following core flows:
